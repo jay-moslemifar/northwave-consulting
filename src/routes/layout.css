@@ -1,0 +1,18 @@
+@import 'tailwindcss';
+@plugin '@tailwindcss/forms';
+@plugin '@tailwindcss/typography';
+
+@theme {
+	--color-primary: #1f2937;
+	--color-secondary: #4b5563;
+	--color-accent: #3b82f6;
+	--color-background: #f9fafb;
+	--font-sans: Manrope;
+}
+
+body {
+	@apply bg-background font-sans text-primary;
+}
+a {
+	@apply text-accent hover:underline;
+}
