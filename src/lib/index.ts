@@ -1,1 +1,5 @@
-// place files you want to import through the `$lib` alias in this folder.
+import { en } from './i18n/en';
+import { nl } from './i18n/nl';
+
+export const translations = { en, nl } as const;
+export type Lang = keyof typeof translations;
