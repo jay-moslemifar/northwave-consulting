@@ -1,7 +1,7 @@
 import { error } from '@sveltejs/kit';
 import { translations, type Lang } from '$lib';
 
-export const load = ({ params }) => {
+export function load({ params }) {
 	const lang = params.lang as Lang;
 
 	if (!(lang in translations)) {
@@ -9,4 +9,4 @@ export const load = ({ params }) => {
 	}
 
 	return { lang, tr: translations[lang] };
-};
+}
