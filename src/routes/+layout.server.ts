@@ -1,7 +1,5 @@
 import { redirect } from '@sveltejs/kit';
 
-export function load({ params }) {
-	if (!params.lang) {
-		throw redirect(307, '/en');
-	}
+export function load({ url }) {
+	if (url.pathname === '/') redirect(307, '/en');
 }
