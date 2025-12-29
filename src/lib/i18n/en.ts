@@ -1,4 +1,6 @@
-export const en = {
+import type { TranslationSchema } from './schema';
+
+export const en: TranslationSchema = {
 	nav: {
 		home: 'Home',
 		about: 'About',
@@ -7,5 +9,8 @@ export const en = {
 	footer: {
 		tagline: 'Clear digital solutions for growing businesses',
 		copyright: '© Northwave Consulting',
+	},
+	errors: {
+		'404': { message: 'Page not found', action: 'Go back home' },
 	},
 };

@@ -2,8 +2,7 @@
 	import Header from '$lib/components/Header.svelte';
 	import Footer from '$lib/components/Footer.svelte';
 
-	let { data, children } = $props();
-	const { lang, tr } = $derived(data);
+	let { children } = $props();
 </script>
 
 <Header />
