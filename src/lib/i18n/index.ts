@@ -39,3 +39,14 @@ export function t(key: StringTranslationKey): string {
 
 	return value;
 }
+
+export function tError(status: number, field: 'message' | 'action') {
+	const errors = translations[getLocale()].errors;
+	const key = String(status);
+
+	if (key in errors) {
+		return errors[key as keyof typeof errors][field];
+	}
+
+	return errors.unknown[field];
+}

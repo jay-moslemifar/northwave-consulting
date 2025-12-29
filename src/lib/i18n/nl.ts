@@ -12,5 +12,6 @@ export const nl: TranslationSchema = {
 	},
 	errors: {
 		'404': { message: 'Pagina niet gevonden', action: 'Terug naar home' },
+		unknown: { message: 'Onbekende fout', action: 'Terug naar home' },
 	},
 };

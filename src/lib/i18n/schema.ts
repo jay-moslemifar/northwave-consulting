@@ -8,7 +8,10 @@ export type TranslationSchema = {
 		tagline: string;
 		copyright: string;
 	};
-	errors: { '404': { message: string; action: string } };
+	errors: {
+		'404': { message: string; action: string };
+		unknown: { message: string; action: string };
+	};
 };
 
 export type StringTranslationKey =
@@ -18,4 +21,6 @@ export type StringTranslationKey =
 	| 'footer.tagline'
 	| 'footer.copyright'
 	| 'errors.404.message'
-	| 'errors.404.action';
+	| 'errors.404.action'
+	| 'errors.unknown.action'
+	| 'errors.unknown.action';
