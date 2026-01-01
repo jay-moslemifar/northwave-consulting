@@ -3,10 +3,14 @@
 @plugin '@tailwindcss/typography';
 
 @theme {
-	--color-primary: #1f2937;
-	--color-secondary: #4b5563;
-	--color-accent: #3b82f6;
-	--color-background: #f9fafb;
+	--color-background: #0b0f14; /* near-black, not pure black */
+	--color-surface: #121826; /* cards, sections */
+	--color-primary: #e5e7eb; /* main text */
+	--color-secondary: #9ca3af; /* muted text */
+	--color-border: #1f2937; /* subtle dividers */
+	--color-accent: #4f46e5; /* deep indigo */
+	--color-accent-soft: #6366f1; /* hover states */
+
 	--font-sans: Manrope;
 }
 
@@ -14,5 +18,5 @@ body {
 	@apply bg-background font-sans text-primary;
 }
 a {
-	@apply text-accent hover:underline;
+	@apply text-accent hover:text-accent-soft hover:underline;
 }
