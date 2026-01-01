@@ -8,7 +8,7 @@ export const en: TranslationSchema = {
 	},
 	footer: {
 		tagline: 'Clear digital solutions for growing businesses',
-		copyright: '© Northwave Consulting',
+		copyright: '© 2026 Northwave Consulting',
 	},
 	errors: {
 		'404': { message: 'Page not found', action: 'Go back home' },

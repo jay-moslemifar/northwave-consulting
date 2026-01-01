@@ -8,7 +8,7 @@ export const nl: TranslationSchema = {
 	},
 	footer: {
 		tagline: 'Heldere digitale oplossingen voor groeiende bedrijven',
-		copyright: '© Northwave Consulting',
+		copyright: '© 2026 Northwave Consulting',
 	},
 	errors: {
 		'404': { message: 'Pagina niet gevonden', action: 'Terug naar home' },
