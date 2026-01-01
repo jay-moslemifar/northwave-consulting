@@ -1,13 +1,18 @@
 <script lang="ts">
 	import Header from '$lib/components/Header.svelte';
 	import Footer from '$lib/components/Footer.svelte';
+	import MobileMenu from '$lib/components/MobileMenu.svelte';
 
 	let { children } = $props();
+
+	let open = $state(false);
 </script>
 
-<Header />
+<Header bind:open />
 
-<main>
+<MobileMenu bind:open />
+
+<main class="relative">
 	{@render children()}
 </main>
 
