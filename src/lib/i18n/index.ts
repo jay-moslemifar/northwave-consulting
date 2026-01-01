@@ -1,11 +1,8 @@
 import { i18nState } from '$lib/i18n/state.svelte';
+import type { Locale } from './config';
 import { en } from './en';
 import { nl } from './nl';
 import type { StringTranslationKey, TranslationSchema } from './schema';
-
-export const LOCALES = ['en', 'nl'] as const;
-export type Locale = (typeof LOCALES)[number];
-export const defaultLocale: Locale = 'en';
 
 const translations: Record<Locale, TranslationSchema> = {
 	en,

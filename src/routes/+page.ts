@@ -1,4 +1,4 @@
-import { defaultLocale } from '$lib/i18n/index.js';
+import { defaultLocale } from '$lib/i18n/config';
 import { redirect } from '@sveltejs/kit';
 
 export function load({ url }) {
