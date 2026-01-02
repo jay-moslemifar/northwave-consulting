@@ -1,6 +1,7 @@
 <script>
 	import { resolve } from '$app/paths';
 	import { getLocale, t } from '$lib/i18n';
+	import LanguageSwitch from './LanguageSwitch.svelte';
 
 	let { open = $bindable() } = $props();
 </script>
@@ -31,56 +32,63 @@
 				<span class="text-accent hover:no-underline">Northwave</span>
 			</div>
 		</a>
-		<button
-			class="inline-flex items-center justify-center p-2 hover:bg-surface md:hidden"
-			aria-label="Open menu"
-			aria-expanded={open}
-			aria-controls="mobile-menu"
-			onclick={() => (open = !open)}
-		>
-			{#if open}
-				<svg
-					class="h-6 w-6"
-					fill="none"
-					viewBox="0 0 24 24"
-					stroke="currentColor"
-					aria-hidden="true"
-				>
-					<path
-						stroke-linecap="round"
-						stroke-linejoin="round"
-						stroke-width="2"
-						d="M6 18L18 6M6 6l12 12"
-					/>
-				</svg>
-			{:else}
-				<svg
-					class="h-6 w-6"
-					fill="none"
-					viewBox="0 0 24 24"
-					stroke="currentColor"
-					aria-hidden="true"
-				>
-					<path
-						stroke-linecap="round"
-						stroke-linejoin="round"
-						stroke-width="2"
-						d="M4 6h16M4 12h16M4 18h16"
-					/>
-				</svg>
-			{/if}
-		</button>
 
-		<div class="hidden gap-5 md:flex">
-			<a href={resolve('/[lang=lang]', { lang: getLocale() })}
-				>{t('nav.home')}</a
+		<div class="flex flex-row-reverse items-center md:flex-row">
+			<button
+				class="inline-flex items-center justify-center border-l border-border p-2 pl-3 hover:bg-surface md:hidden"
+				aria-label="Open menu"
+				aria-expanded={open}
+				aria-controls="mobile-menu"
+				onclick={() => (open = !open)}
 			>
-			<a href={resolve('/[lang=lang]/about', { lang: getLocale() })}
-				>{t('nav.about')}</a
-			>
-			<a href={resolve('/[lang=lang]/contact', { lang: getLocale() })}
-				>{t('nav.contact')}</a
-			>
+				{#if open}
+					<svg
+						class="h-6 w-6"
+						fill="none"
+						viewBox="0 0 24 24"
+						stroke="currentColor"
+						aria-hidden="true"
+					>
+						<path
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							stroke-width="2"
+							d="M6 18L18 6M6 6l12 12"
+						/>
+					</svg>
+				{:else}
+					<svg
+						class="h-6 w-6"
+						fill="none"
+						viewBox="0 0 24 24"
+						stroke="currentColor"
+						aria-hidden="true"
+					>
+						<path
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							stroke-width="2"
+							d="M4 6h16M4 12h16M4 18h16"
+						/>
+					</svg>
+				{/if}
+			</button>
+
+			<nav class="hidden gap-5 border-r border-border pr-5 md:flex">
+				<a href={resolve('/[lang=lang]', { lang: getLocale() })}
+					>{t('nav.home')}</a
+				>
+				<a href={resolve('/[lang=lang]/about', { lang: getLocale() })}
+					>{t('nav.about')}</a
+				>
+				<a href={resolve('/[lang=lang]/contact', { lang: getLocale() })}
+					>{t('nav.contact')}</a
+				>
+			</nav>
+
+			<div class="pr-3 md:pl-5">
+				<LanguageSwitch />
+			</div>
 		</div>
 	</div>
 </header>
