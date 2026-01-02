@@ -18,5 +18,5 @@ body {
 	@apply bg-background font-sans text-primary;
 }
 a {
-	@apply rounded-lg p-1 text-primary duration-200 hover:text-accent-soft hover:underline hover:transition-colors;
+	@apply rounded-lg p-1 text-primary underline-offset-2 duration-200 hover:text-accent-soft hover:underline hover:transition-colors;
 }
